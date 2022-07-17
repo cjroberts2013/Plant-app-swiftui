@@ -10,10 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            WelcomeScreenView()
         }
     }
 }
@@ -21,5 +18,22 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+struct NextBtn: View {
+    var body: some View {
+        HStack {
+            Text("Next")
+                .font(.system(size: 20))
+                .fontWeight(.semibold)
+            
+            Image(systemName: "chevron.forward")
+        }
+        .foregroundColor(Color("Primary"))
+        .padding()
+        .padding(.horizontal)
+        .background(.white)
+        .cornerRadius(50)
     }
 }
